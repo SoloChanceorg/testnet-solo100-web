@@ -95,6 +95,11 @@
         "@type": "Question",
         "name": "Where is solo100.org located?",
         "acceptedAnswer": { "@type": "Answer", "text": "The pool server runs in Frankfurt, Germany. Invoicing and domain purchases are handled through Estonia, thanks to the Estonian e-Residency programme." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why are all Bitcoin addresses public? Why not mask them until a valid share is found?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To be fully trustless, all payouts must be coinbase outputs — written directly into the block by the miner who finds it, with no pool operator touching the coins at any point. By the nature of that design, Bitcoin addresses must be declared upfront and are therefore public, just as they would be in any coinbase transaction on the Bitcoin blockchain." }
       }
     ]
   }
@@ -679,6 +684,7 @@
       <button class="nav-btn" data-section="best100">Best 100</button>
       <button class="nav-btn" data-section="blocks">Blocks</button>
       <button class="nav-btn" data-section="strategy">Strategy</button>
+      <button class="nav-btn" data-section="disclaimer">Disclaimer</button>
       <button class="nav-btn" data-section="faq">FAQ</button>
     </nav>
   </div>
@@ -1121,33 +1127,76 @@
     <h2 class="section-title" style="margin-top:.5rem">Strategy Tips</h2>
     <div style="display:flex;flex-direction:column;gap:.75rem;">
       <div class="card">
-        <div class="info-title">1 · Rotate addresses once you've secured a strong share</div>
+        <div class="info-title">🔄 &nbsp;Rotate addresses once you've secured a strong share</div>
         <div class="info-desc" style="margin-top:.4rem">Each address holds exactly one leaderboard slot. Once you're well inside the Best 100, extra hashing on that address does little. Switch to a fresh address to compete for a second slot — or continue regular solo mining and rejoin next round.</div>
       </div>
       <div class="card">
-        <div class="info-title">2 · Short rental bursts beat sustained campaigns</div>
+        <div class="info-title">⚡ &nbsp;Short rental bursts beat sustained campaigns</div>
         <div class="info-desc" style="margin-top:.4rem">Only the best 100 shares matter — not total work. A targeted burst of rented hash at the start of a fresh round is far more efficient than renting for the whole round. Use a fresh Bitcoin address for each rental — each address gets its own leaderboard slot. Since all 100 qualifying miners earn the same 0.0275 BTC regardless of rank, improving an already-secured slot doesn't increase your payout. Point that hash at a new address instead.</div>
       </div>
       <div class="card">
-        <div class="info-title">3 · Mine a little, park your spot, mine elsewhere</div>
+        <div class="info-title">🏖️ &nbsp;Mine a little, park your spot, mine elsewhere</div>
         <div class="info-desc" style="margin-top:.4rem">You don't need to mine here full time. All that matters is that your address is inside the Best 100 when a block is found. Mine enough to secure a spot, then point your hardware at another pool in the meantime — no pressure. Just check back occasionally to make sure you're still inside the cutoff, since new miners keep joining and the competition shifts over time.</div>
       </div>
       <div class="card">
-        <div class="info-title">4 · Smaller miners punch above their weight here</div>
+        <div class="info-title">🤏 &nbsp;Smaller miners punch above their weight here</div>
         <div class="info-desc" style="margin-top:.4rem">A fleet of smaller machines under different addresses can hold multiple Best 100 slots simultaneously. More slots = more expected payout exposure per block found.</div>
       </div>
       <div class="card">
-        <div class="info-title">5 · Join early in a fresh round</div>
+        <div class="info-title">🚀 &nbsp;Join early in a fresh round</div>
         <div class="info-desc" style="margin-top:.4rem">Right after a block is found the leaderboard resets and every slot is open. Even a modest share can land a top position before the field fills up. If the pool gets lucky and finds a block at low effort, early joiners benefit the most — check your position regularly to make sure you're still inside the Best 100 as the round progresses.</div>
       </div>
       <div class="card">
-        <div class="info-title">6 · Watch the cutoff line</div>
+        <div class="info-title">👁️ &nbsp;Watch the cutoff line</div>
         <div class="info-desc" style="margin-top:.4rem">The Best 100 leaderboard shows where the cutoff sits in real time. If you're comfortably inside the top 50 on one address, start a second. If you're just outside, a short burst may push you in.</div>
       </div>
       <div class="card">
-        <div class="info-title">7 · Your payout will arrive — but patience is required</div>
+        <div class="info-title">⏰ &nbsp;Your payout will arrive — but patience is required</div>
         <div class="info-desc" style="margin-top:.4rem">When solo100.org finds a block, qualifying miners in the Best 100 will receive their Bitcoin directly to the address they mined with. However, newly mined coins (coinbase outputs) are locked by the Bitcoin protocol for <strong>100 block confirmations</strong> — roughly 16–17 hours — before they become spendable. This is a Bitcoin consensus rule that applies to all mining pools worldwide, not something specific to solo100.org. If your wallet shows the coins but won't let you spend them yet, that's why. Please don't reach out on Telegram or X about this — it will resolve on its own.</div>
       </div>
+    </div>
+
+    <div class="disclaimer" style="margin-top:2rem;">
+      <div class="disclaimer-icon">🚨</div>
+      <div>
+        <strong>Disclaimer</strong>
+        <p>Participation in Bitcoin mining, including through solo100.org, which is still considered in beta testing, involves risks such as market volatility, hardware failure, and changes in network difficulty. solo100.org is in beta and has not yet found a block; there is no assurance of future block discoveries or payouts. Users should exercise caution and consider their financial situation before engaging in mining activities.</p>
+        <p style="margin-top:.6rem;">solo100.org shall not be held responsible for any losses, missed payouts, technical failures, or interruptions of service of any kind.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       DISCLAIMER
+  ══════════════════════════════════════════════════════════ -->
+  <section id="disclaimer" class="section">
+
+    <h2 class="section-title" style="margin-top:.5rem">What Can Go Wrong</h2>
+    <p style="color:var(--muted);font-size:.95rem;margin-bottom:1.5rem;">solo100.org is in beta. Read these before you point your miner here.</p>
+
+    <div style="display:flex;flex-direction:column;gap:.75rem;">
+
+      <div class="card">
+        <div class="info-title">🛠️ &nbsp;Pool downtime or bugs</div>
+        <div class="info-desc" style="margin-top:.4rem">solo100.org is in beta and extremely early in development. It is immature in several areas of pool software and management. Think of it as a hobby, an experiment, and entertainment. Join only if you are comfortable knowing it can go down or go wrong at any minute, in any way, definitively or indefinitely. Remember this a thousand times: this website, its software, and the individual behind it do not promise anything — at any level, in any context.</div>
+      </div>
+
+      <div class="card">
+        <div class="info-title">⏳ &nbsp;No block is ever found</div>
+        <div class="info-desc" style="margin-top:.4rem">Bitcoin mining is probabilistic. Even a pool with significant hashrate can go years without finding a block. solo100.org is a small pool — the expected time between blocks is long, and there is no guarantee a block will ever be found. Your shares earn nothing if no block is found.</div>
+      </div>
+
+      <div class="card">
+        <div class="info-title">📉 &nbsp;You fall out (or never been) of the Best 100 before a block is found</div>
+        <div class="info-desc" style="margin-top:.4rem">There are two ways this can happen.<br><br>First: if you are sitting in one of the last few positions in the Best 100, a stronger share from a new miner can push you out at any moment — including the moment just before a block is found. Only your rank at the exact instant the block is found determines your payout.<br><br>Second: even if you entered the Best 100 a second before the block was found, you may still not get paid. The 100 addresses are embedded in the coinbase output of the block template distributed to miners. If the block finder's device had not yet received the updated template with your address included — because the pool hadn't delivered it in time — your address will not be in the coinbase output of the winning block, and you receive nothing. If your address has been in the Best 100 for several minutes, this is not a risk for you — it only affects very late arrivals who entered the list moments before the block was found.<br><br><span style="color:var(--muted);font-size:.82rem;">The first scenario is a real and likely risk, especially for ranks #98, #99 and #100. The second is a genuine edge case — don't expect it to happen.</span></div>
+      </div>
+
+      <div class="card">
+        <div class="info-title">📝 &nbsp;Wrong Bitcoin address</div>
+        <div class="info-desc" style="margin-top:.4rem">Payouts are coinbase outputs sent directly to the address you mine with. If you enter a wrong or misspelled address, the coins go to that address — permanently. solo100.org has no way to redirect or recover them. Double-check your address before you start mining.</div>
+      </div>
+
     </div>
 
     <div class="disclaimer" style="margin-top:2rem;">
@@ -1217,6 +1266,11 @@
       <details class="faq-item">
         <summary>Where is solo100.org located?</summary>
         <p>The pool server runs in Frankfurt, Germany. Invoicing and domain purchases are handled through Estonia, thanks to the Estonian e-Residency programme, which allows individuals to access EU digital services without being a resident. The operator lives somewhere else.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Why are all Bitcoin addresses public? Why not mask them until a valid share is found?</summary>
+        <p>To be fully trustless, all payouts must be coinbase outputs — written directly into the block by the miner who finds it, with no pool operator touching the coins at any point. By the nature of that design, Bitcoin addresses must be declared upfront and are therefore public, just as they would be in any coinbase transaction on the Bitcoin blockchain.</p>
       </details>
 
     </div>
@@ -1431,7 +1485,7 @@ async function initLeaderboard() {
 }
 
 // ── Section nav ────────────────────────────────────────────
-const VALID_SECTIONS = ['home','connect','mystats','best100','blocks','strategy','faq'];
+const VALID_SECTIONS = ['home','connect','mystats','best100','blocks','strategy','disclaimer','faq'];
 
 function switchSection(id) {
   if (!VALID_SECTIONS.includes(id)) id = 'home';
