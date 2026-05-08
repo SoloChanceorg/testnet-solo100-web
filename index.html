@@ -203,6 +203,18 @@
       color: var(--muted); margin-bottom: 1rem; margin-top: 0;
     }
 
+    /* ── MAINTENANCE BANNER ── */
+    .maintenance-banner {
+      background: #7c2d12;
+      border-bottom: 2px solid #ea580c;
+      color: #fed7aa;
+      font-size: .92rem;
+      line-height: 1.55;
+      padding: .85rem 1.25rem;
+      text-align: center;
+    }
+    .maintenance-banner strong { color: #ffedd5; font-weight: 600; }
+
     /* ── DISCLAIMER ── */
     .disclaimer {
       display: flex; align-items: flex-start; gap: 1rem;
@@ -493,6 +505,9 @@
     .pill-out  { background: var(--red-dim);   color: var(--red);   border: 1px solid rgba(248,81,73,.3); }
     .pill-hero { background: rgba(247,147,26,.18); color: var(--accent); border: 1px solid rgba(247,147,26,.5); }
 
+    .lb-table tr.out-row td.addr-cell,
+    .lb-table tr.out-row td.share-cell { opacity: .5; }
+
     .cutoff-row td {
       padding: .55rem 1rem;
       background: linear-gradient(to bottom, rgba(247,147,26,.1), rgba(220,38,38,.07));
@@ -632,6 +647,13 @@
   </style>
 </head>
 <body>
+
+<div class="maintenance-banner">
+  <strong>Mining temporarily paused for maintenance.</strong>
+  We discovered a bug and are working to fix it as quickly as possible.
+  All best shares and addresses already submitted are <strong>safe and secure</strong>.
+  We will resume operations as soon as the issue is resolved. Thank you for your patience.
+</div>
 
 <header class="header">
   <div class="header-inner">
@@ -1426,7 +1448,7 @@ async function initLeaderboard() {
     const rnk = m.rank === 1 ? '🥇' : m.rank === 2 ? '🥈' : m.rank === 3 ? '🥉' : m.rank;
     const payBtc = (m.btc != null ? m.btc : (inTop ? 0.0275 : 0)).toFixed(4);
     const payUsd = inTop ? ` <span class="usd-val" data-btc="${m.btc || 0.0275}"></span>` : '';
-    html += `<tr>
+    html += `<tr${inTop?'':' class="out-row"'}>
       <td class="rnk${m.rank<=3?' pod':''}">${rnk}</td>
       <td class="addr-cell">${m.address}</td>
       <td class="share-cell col-bs">${fmtDiff(m.bestshare)}</td>
