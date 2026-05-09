@@ -322,6 +322,8 @@
       content: ''; width: 6px; height: 6px; border-radius: 50%;
       background: var(--green); animation: pulse 1.6s ease-in-out infinite;
     }
+    .live.down { color: var(--red); }
+    .live.down::before { background: var(--red); animation: none; }
     @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.2} }
 
     /* ── CONNECT CARD ── */
@@ -734,7 +736,7 @@
     <!-- Pool Status -->
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem;">
       <h2 class="section-title" style="margin-bottom:0;">Pool Status</h2>
-      <span class="live">Live</span>
+      <span class="live down">Down</span>
     </div>
     <div class="warming-banner" id="pool-warming">
       <span class="warming-icon">🌱</span>
@@ -1051,7 +1053,7 @@
 
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem;">
       <h2 class="section-title" style="margin-bottom:0;">Current Best 100 Shares</h2>
-      <span class="live">Live</span>
+      <span class="live down">Down</span>
     </div>
 
     <p style="font-size:.82rem;color:var(--muted);margin-bottom:.75rem;">Only the best 200 addresses are shown here. If your address isn't listed, use <button onclick="switchSection('mystats')" style="background:none;border:none;color:var(--accent);font-family:var(--font);font-size:.82rem;cursor:pointer;padding:0;text-decoration:underline;">My Stats</button> to look up your best share.</p>
