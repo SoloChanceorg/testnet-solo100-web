@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://solo100.org/sitemap.xml
+Sitemap: https://testnet.solo100.org/sitemap.xml

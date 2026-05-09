@@ -6,14 +6,14 @@
   <title>solo100.org — Bitcoin Solo Mining Pool · Best 100 Shares · SoloChance.org</title>
   <meta name="description" content="Bitcoin mining pool where the best 100 quality shares split 88% of the block reward equally. 10% finder bonus. 2% fee. SHA-256. By SoloChance.org." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://solo100.org/" />
+  <link rel="canonical" href="https://testnet.solo100.org/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://solo100.org/" />
+  <meta property="og:url"         content="https://testnet.solo100.org/" />
   <meta property="og:title"       content="solo100.org — Best 100 BTC Mining Pool" />
   <meta property="og:description" content="Top 100 quality shares split 88% of the block reward equally. 10% finder bonus. 2% fee. SHA-256 Bitcoin solo mining pool." />
-  <meta property="og:image"       content="https://solo100.org/images/og-image.png" />
+  <meta property="og:image"       content="https://testnet.solo100.org/images/og-image.png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt"    content="solo100.org — Top 100 quality shares. Equal Bitcoin payout." />
@@ -23,7 +23,7 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="solo100.org — Best 100 BTC Mining Pool" />
   <meta name="twitter:description" content="Top 100 quality shares split 88% of the block reward equally. 10% finder bonus. 2% fee. SHA-256 Bitcoin solo mining pool." />
-  <meta name="twitter:image"       content="https://solo100.org/images/og-image.png" />
+  <meta name="twitter:image"       content="https://testnet.solo100.org/images/og-image.png" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "solo100.org",
-    "url": "https://solo100.org/",
+    "url": "https://testnet.solo100.org/",
     "description": "Bitcoin solo mining pool where the top 100 quality shares split 88% of the block reward equally.",
     "publisher": {
       "@type": "Organization",
@@ -651,12 +651,7 @@
 <body>
 
 <div class="maintenance-banner">
-  Sorry for the inconvenience. We needed to stop mining operations until a bug is resolved. Your submitted shares and addresses are safe and won't be deleted.
-  solo100.org is a totally new idea that hasn't been done before, and we are doing our best to resume it ASAP.
-  Until then, please stay in touch on
-  <a href="https://t.me/solochanceorg" target="_blank" rel="noopener" style="color:#ffedd5;text-decoration:underline;">Telegram</a>
-  and
-  <a href="https://x.com/solochanceorg" target="_blank" rel="noopener" style="color:#ffedd5;text-decoration:underline;">X</a>.
+  THIS TEST SOLO100.ORG WORKS ON TESTNET4.
 </div>
 
 <header class="header">
@@ -720,23 +715,10 @@
       </div>
     </div>
 
-    <!-- Bitcoin Stats -->
-    <h2 class="section-title">Bitcoin</h2>
-    <div class="card-grid two" style="margin-bottom:2rem">
-      <div class="card stat-card">
-        <div class="stat-label">BTC / USD</div>
-        <div class="stat-value" id="s-price">—</div>
-      </div>
-      <div class="card stat-card">
-        <div class="stat-label">Network Hashrate</div>
-        <div class="stat-value" id="s-diff">—</div>
-      </div>
-    </div>
-
     <!-- Pool Status -->
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem;">
       <h2 class="section-title" style="margin-bottom:0;">Pool Status</h2>
-      <span class="live down">Down</span>
+      <span class="live">Live</span>
     </div>
     <div class="warming-banner" id="pool-warming">
       <span class="warming-icon">🌱</span>
@@ -784,25 +766,6 @@
       </div>
     </div>
 
-    <!-- Pool Chances -->
-    <div id="pool-chances-section" class="hidden">
-      <h2 class="section-title" style="margin-top:2.5rem">Pool Chances</h2>
-      <div class="card-grid three" style="margin-bottom:2rem">
-        <div class="card stat-card">
-          <div class="stat-label">Chance / Day</div>
-          <div class="stat-value skeleton" id="s-chance-day" style="font-size:1.2rem">—</div>
-        </div>
-        <div class="card stat-card">
-          <div class="stat-label">Chance / Week</div>
-          <div class="stat-value skeleton" id="s-chance-week" style="font-size:1.2rem">—</div>
-        </div>
-        <div class="card stat-card">
-          <div class="stat-label">Chance / Month</div>
-          <div class="stat-value skeleton" id="s-chance-month" style="font-size:1.2rem">—</div>
-        </div>
-      </div>
-    </div>
-
     <h2 class="section-title" style="margin-top:2.5rem">Why <span class="s100">solo<span class="accent">100</span>.org</span> is awesome</h2>
     <div class="card-grid three-col">
       <div class="card info-card">
@@ -834,7 +797,7 @@
     <div class="card connect-card">
       <div class="connect-row">
         <span class="connect-label">Stratum</span>
-        <code class="connect-value">bitcoin.solo100.org:3333</code>
+        <code class="connect-value">testnet.solo100.org:3333</code>
       </div>
       <p class="input-hint" style="margin-top:.3rem">Rentals (Braiins / NiceHash): use port <code>4444</code></p>
       <div class="connect-row" style="margin-top:.75rem">
@@ -862,7 +825,7 @@
     <div class="card connect-card" style="margin-bottom:1.5rem">
       <div class="connect-row">
         <span class="connect-label">Stratum</span>
-        <code class="connect-value">bitcoin.solo100.org:3333</code>
+        <code class="connect-value">testnet.solo100.org:3333</code>
         <button class="copy-btn" id="copy-stratum-btn" onclick="copyStratum()">Copy</button>
       </div>
       <p class="input-hint" style="margin-top:.3rem">Rentals (Braiins / NiceHash): use port <code>4444</code> — <button onclick="copyStratumHD()" id="copy-stratum-hd-btn" class="link-btn">copy</button></p>
@@ -892,7 +855,7 @@
       <div id="tab-bitaxe" class="bitaxe-ui mockup-ui active">
         <div class="bitaxe-header"><span class="bitaxe-logo">⛏</span><span>Pool Settings</span></div>
         <div class="bitaxe-form">
-          <div class="bitaxe-field"><label>Stratum Host</label><input type="text" value="bitcoin.solo100.org" readonly /></div>
+          <div class="bitaxe-field"><label>Stratum Host</label><input type="text" value="testnet.solo100.org" readonly /></div>
           <div class="bitaxe-field"><label>Stratum Port</label><input type="text" value="3333" readonly /></div>
           <div class="bitaxe-field"><label>User</label><input type="text" value="YOUR_BTC_ADDRESS.bitaxe1" readonly /></div>
           <div class="bitaxe-field"><label>Password</label><input type="text" value="x" readonly /></div>
@@ -902,7 +865,7 @@
       <div id="tab-avalon" class="avalon-ui mockup-ui">
         <div class="avalon-header"><span class="avalon-logo">⛏</span><span>Pool Configuration</span></div>
         <div class="avalon-form">
-          <div class="avalon-field"><label>Pool 1 URL</label><input type="text" value="stratum+tcp://bitcoin.solo100.org:3333" readonly /></div>
+          <div class="avalon-field"><label>Pool 1 URL</label><input type="text" value="stratum+tcp://testnet.solo100.org:3333" readonly /></div>
           <div class="avalon-field"><label>Pool 1 Worker</label><input type="text" value="YOUR_BTC_ADDRESS.avalon1" readonly /></div>
           <div class="avalon-field"><label>Pool 1 Password</label><input type="text" value="x" readonly /></div>
         </div>
@@ -911,21 +874,21 @@
       <div id="tab-braiins" class="braiins-ui mockup-ui">
         <div class="braiins-header"><span class="braiins-logo">⛏</span><span>Favourite Pools</span></div>
         <div class="braiins-form">
-          <div class="braiins-field"><label>Pool URL</label><input type="text" value="YOUR_BTC_ADDRESS.braiins@stratum+tcp://bitcoin.solo100.org:4444" readonly /></div>
+          <div class="braiins-field"><label>Pool URL</label><input type="text" value="YOUR_BTC_ADDRESS.braiins@stratum+tcp://testnet.solo100.org:4444" readonly /></div>
         </div>
       </div>
 
       <div id="tab-nicehash" class="nicehash-ui mockup-ui">
         <div class="nicehash-header"><span class="nicehash-logo">⛏</span><span>Add new pool</span></div>
         <div class="nicehash-form">
-          <div class="nicehash-field"><label>Custom pool name</label><input type="text" value="bitcoin.solo100.org" readonly /></div>
+          <div class="nicehash-field"><label>Custom pool name</label><input type="text" value="testnet.solo100.org" readonly /></div>
           <div class="nicehash-field">
             <label>Algorithm</label>
             <select disabled><option>SHA256AsicBoost</option></select>
           </div>
           <p class="nicehash-note">minimum pool difficulty: &gt;= 500000</p>
           <div class="nicehash-row">
-            <div class="nicehash-field"><label>Stratum hostname or IP</label><input type="text" value="bitcoin.solo100.org" readonly /></div>
+            <div class="nicehash-field"><label>Stratum hostname or IP</label><input type="text" value="testnet.solo100.org" readonly /></div>
             <div class="nicehash-field"><label>Port</label><input type="text" value="4444" readonly /></div>
           </div>
           <div class="nicehash-field"><label>Username</label><input type="text" value="YOUR_BTC_ADDRESS.nicehash" readonly /></div>
@@ -935,12 +898,12 @@
 
       <pre id="tab-cpuminer" class="config-block"><code>cpuminer-opt \
   -a sha256d \
-  -o stratum+tcp://bitcoin.solo100.org:3333 \
+  -o stratum+tcp://testnet.solo100.org:3333 \
   -u YOUR_BTC_ADDRESS.worker1 \
   -p x</code></pre>
 
       <pre id="tab-cgminer" class="config-block"><code>cgminer \
-  --url stratum+tcp://bitcoin.solo100.org:3333 \
+  --url stratum+tcp://testnet.solo100.org:3333 \
   --user YOUR_BTC_ADDRESS.worker1 \
   --pass x</code></pre>
     </div>
@@ -1053,7 +1016,7 @@
 
     <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;margin-bottom:1rem;">
       <h2 class="section-title" style="margin-bottom:0;">Current Best 100 Shares</h2>
-      <span class="live down">Down</span>
+      <span class="live">Live</span>
     </div>
 
     <p style="font-size:.82rem;color:var(--muted);margin-bottom:.75rem;">Only the best 200 addresses are shown here. If your address isn't listed, use <button onclick="switchSection('mystats')" style="background:none;border:none;color:var(--accent);font-family:var(--font);font-size:.82rem;cursor:pointer;padding:0;text-decoration:underline;">My Stats</button> to look up your best share.</p>
@@ -1299,35 +1262,6 @@ function hashrateToHps(str) {
   return parseFloat(m[1]) * (units[m[2].toUpperCase()] ?? 1);
 }
 
-async function loadPoolChances(hashrate) {
-  const thps = hashrateToHps(hashrate) / 1e12;
-  if (!thps) return;
-  let d;
-  try {
-    const res = await fetch(`https://api.solochance.org/getSoloChanceCalculations?currency=BTC&hashrate=${thps.toFixed(6)}&hashrateUnit=TH`);
-    d = await res.json();
-  } catch(e) { return; }
-
-  if (d.price) {
-    btcPrice = d.price;
-    const p = document.getElementById('s-price');
-    if (p) { p.textContent = '$' + btcPrice.toLocaleString(); p.classList.remove('skeleton'); }
-    updateUsdValues();
-  }
-  if (d.networkHashrateText) {
-    const el = document.getElementById('s-diff');
-    if (el) { el.textContent = d.networkHashrateText; el.classList.remove('skeleton'); }
-  }
-
-  function cSet(id, val) {
-    const el = document.getElementById(id);
-    if (el) { el.textContent = val; el.classList.remove('skeleton'); }
-  }
-  cSet('s-chance-day',  d.dayChanceText   || '—');
-  cSet('s-chance-week', d.weekChanceText  || '—');
-  cSet('s-chance-month',d.monthChanceText || '—');
-  document.getElementById('pool-chances-section').classList.remove('hidden');
-}
 
 function formatUptime(seconds) {
   if (seconds == null || isNaN(seconds)) return '—';
@@ -1342,7 +1276,7 @@ function formatUptime(seconds) {
 async function fetchPoolStatus() {
   let lines;
   try {
-    const res = await fetch('https://bitcoin.solo100.org/pool/pool.status');
+    const res = await fetch('https://testnet.solo100.org/pool/pool.status');
     const text = await res.text();
     lines = text.trim().split('\n').filter(Boolean).map(l => JSON.parse(l));
   } catch(e) { return; }
@@ -1365,7 +1299,6 @@ async function fetchPoolStatus() {
   if (info)   sSet('s-uptime', formatUptime(info.runtime));
   if (hrates) {
     sSet('s-hr', fmtShort(hashrateToHps(hrates.hashrate1m)));
-    loadPoolChances(hrates.hashrate1m);
   }
   if (stats) {
     sSet('s-best',   fmtDiff(stats.bestshare));
@@ -1378,7 +1311,7 @@ async function initLeaderboard() {
   const lb = document.getElementById('lb');
   let lines;
   try {
-    const res = await fetch('https://bitcoin.solo100.org/pool/nsolo.status');
+    const res = await fetch('https://testnet.solo100.org/pool/nsolo.status');
     const text = await res.text();
     lines = text.trim().split('\n').filter(Boolean).map(l => JSON.parse(l));
   } catch(e) {
@@ -1516,14 +1449,14 @@ document.querySelectorAll('.tab-btn[data-tab]').forEach(btn => {
 
 // ── Copy stratum ───────────────────────────────────────────
 function copyStratum() {
-  navigator.clipboard.writeText('stratum+tcp://bitcoin.solo100.org:3333').then(() => {
+  navigator.clipboard.writeText('stratum+tcp://testnet.solo100.org:3333').then(() => {
     const btn = document.getElementById('copy-stratum-btn');
     btn.textContent = 'Copied!'; btn.classList.add('copied');
     setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
   });
 }
 function copyStratumHD() {
-  navigator.clipboard.writeText('stratum+tcp://bitcoin.solo100.org:4444').then(() => {
+  navigator.clipboard.writeText('stratum+tcp://testnet.solo100.org:4444').then(() => {
     const btn = document.getElementById('copy-stratum-hd-btn');
     btn.textContent = 'Copied!'; btn.classList.add('copied');
     setTimeout(() => { btn.textContent = 'Copy'; btn.classList.remove('copied'); }, 2000);
@@ -1553,7 +1486,7 @@ async function lookupStats() {
 
   let data;
   try {
-    const res = await fetch('https://bitcoin.solo100.org/users/' + encodeURIComponent(addr));
+    const res = await fetch('https://testnet.solo100.org/users/' + encodeURIComponent(addr));
     if (res.ok) data = await res.json();
   } catch(e) { /* network error */ }
 
@@ -1586,7 +1519,7 @@ async function lookupStats() {
   if (cutoffEl && cutoffMiner) cutoffEl.textContent = fmtDiff(cutoffMiner.bestshare);
   msShow('ms-best100-card');
 
-  const curlUrl = 'https://bitcoin.solo100.org/users/' + addr;
+  const curlUrl = 'https://testnet.solo100.org/users/' + addr;
   document.getElementById('ms-curl').textContent = 'curl ' + curlUrl;
   document.getElementById('ms-raw').textContent = JSON.stringify(data, null, 2);
   msShow('ms-raw-card');
