@@ -6,14 +6,14 @@
   <title>solo100.org — Bitcoin Solo Mining Pool · Best 100 Shares · SoloChance.org</title>
   <meta name="description" content="Bitcoin mining pool where the best 100 quality shares split 88% of the block reward equally. 10% finder bonus. 2% fee. SHA-256. By SoloChance.org." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://testnet.solo100.org/" />
+  <link rel="canonical" href="https://test.solo100.org/" />
 
   <!-- Open Graph -->
   <meta property="og:type"        content="website" />
-  <meta property="og:url"         content="https://testnet.solo100.org/" />
+  <meta property="og:url"         content="https://test.solo100.org/" />
   <meta property="og:title"       content="solo100.org — Best 100 BTC Mining Pool" />
   <meta property="og:description" content="Top 100 quality shares split 88% of the block reward equally. 10% finder bonus. 2% fee. SHA-256 Bitcoin solo mining pool." />
-  <meta property="og:image"       content="https://testnet.solo100.org/images/og-image.png" />
+  <meta property="og:image"       content="https://test.solo100.org/images/og-image.png" />
   <meta property="og:image:width"  content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt"    content="solo100.org — Top 100 quality shares. Equal Bitcoin payout." />
@@ -23,7 +23,7 @@
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="solo100.org — Best 100 BTC Mining Pool" />
   <meta name="twitter:description" content="Top 100 quality shares split 88% of the block reward equally. 10% finder bonus. 2% fee. SHA-256 Bitcoin solo mining pool." />
-  <meta name="twitter:image"       content="https://testnet.solo100.org/images/og-image.png" />
+  <meta name="twitter:image"       content="https://test.solo100.org/images/og-image.png" />
 
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "solo100.org",
-    "url": "https://testnet.solo100.org/",
+    "url": "https://test.solo100.org/",
     "description": "Bitcoin solo mining pool where the top 100 quality shares split 88% of the block reward equally.",
     "publisher": {
       "@type": "Organization",
@@ -156,9 +156,13 @@
     a:hover { text-decoration: underline; }
     strong { font-weight: 500; }
 
+    /* ── TOPBAR (banner + header, stick together) ── */
+    .site-topbar {
+      position: sticky; top: 0; z-index: 100;
+    }
+
     /* ── HEADER ── */
     .header {
-      position: sticky; top: 0; z-index: 100;
       background: rgba(13,17,23,.85);
       backdrop-filter: var(--blur); -webkit-backdrop-filter: var(--blur);
       border-bottom: 1px solid var(--border);
@@ -205,15 +209,16 @@
 
     /* ── MAINTENANCE BANNER ── */
     .maintenance-banner {
-      background: #7c2d12;
-      border-bottom: 2px solid #ea580c;
-      color: #fed7aa;
-      font-size: .92rem;
-      line-height: 1.55;
-      padding: .85rem 1.25rem;
+      background: #d1242f;
+      color: #fff;
+      font-size: .9rem;
+      font-weight: 500;
+      line-height: 1.5;
+      padding: .5rem 1rem;
       text-align: center;
     }
-    .maintenance-banner strong { color: #ffedd5; font-weight: 600; }
+    .maintenance-banner a { color: #fff; text-decoration: underline; }
+    .maintenance-banner strong { color: #fff; font-weight: 700; }
 
     /* ── DISCLAIMER ── */
     .disclaimer {
@@ -568,6 +573,13 @@
     .footer-inner { display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap; }
     .footer a { color: var(--muted); }
     .footer a:hover { color: var(--accent); text-decoration: none; }
+    .footer-tg-link { display: inline-flex; align-items: center; gap: .4rem; }
+    .footer-networks {
+      display: flex; flex-direction: column; align-items: center; gap: .35rem;
+      margin-top: .85rem; text-align: center;
+    }
+    .footer-bottom { margin-top: .85rem; font-size: .8rem; text-align: center; }
+    .footer-bottom-sub { margin-top: .3rem; }
 
     /* ── TELEGRAM BUTTON ── */
     .tg-btn {
@@ -650,9 +662,10 @@
 </head>
 <body>
 
-<div class="maintenance-banner">
-  This is a test instance of solo100.org running on <a href="https://mempool.space/testnet4" target="_blank" rel="noopener" style="color:#ffedd5;text-decoration:underline;">Testnet4</a>.
-  To join the test, you need to use <strong>testnet.solo100.org:3333</strong> and Testnet address types.
+<div class="site-topbar">
+
+<div class="maintenance-banner" role="alert">
+  This is the Testnet4 version of solo100.org · For mainnet, visit <a href="https://solo100.org">solo100.org</a>
 </div>
 
 <header class="header">
@@ -673,6 +686,8 @@
     </nav>
   </div>
 </header>
+
+</div>
 
 <main class="container">
 
@@ -1216,12 +1231,20 @@
 </main>
 
 <footer class="footer">
-  <div class="container">
-    <div class="footer-inner">
-      <span>Built in 🇪🇪 Estonia · Hosted in 🇩🇪 Germany</span>
-      <span>© <span class="s100">solo<span class="accent">100</span>.org</span> · a <a href="https://solochance.org" target="_blank" rel="noopener">SoloChance.org</a> project</span>
-      <span><a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></span>
-    </div>
+  <div class="container footer-inner">
+    <a href="https://t.me/solochanceorg" target="_blank" rel="noopener" class="footer-tg-link">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-1.97 9.289c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.17 14.498l-2.95-.924c-.64-.204-.657-.64.136-.948l11.57-4.461c.537-.194 1.006.131.836.083z"/></svg>
+      t.me/solochanceorg
+    </a>
+    <span><a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></span>
+  </div>
+  <div class="container footer-networks">
+    <div>Mainnet: <a href="https://solo100.org">solo100.org</a> — bitcoin.solo100.org:3333</div>
+    <div>Testnet4: <a href="https://test.solo100.org">test.solo100.org</a> — testnet.solo100.org:3333</div>
+  </div>
+  <div class="container footer-bottom">
+    <div>© 2026 <span class="s100">solo<span class="accent">100</span>.org</span>. · a <a href="https://solochance.org" target="_blank" rel="noopener">SoloChance.org</a> project</div>
+    <div class="footer-bottom-sub">Built in 🇪🇪 Estonia · Hosted in 🇩🇪 Germany</div>
   </div>
 </footer>
 
